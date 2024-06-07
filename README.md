@@ -1,30 +1,65 @@
-# React + TypeScript + Vite
+# Lemon Cake Loader
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lemon Cake Loader is a Chrome extension that allows users to manage cookies for Netflix. This extension can set, get, and remove `SecureNetflixId` and `NetflixId` cookies to facilitate smoother Netflix usage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Set Cookies**: Manually set `SecureNetflixId` and `NetflixId` cookies for Netflix.
+-   **Get Cookies**: Retrieve the current values of `SecureNetflixId` and `NetflixId` cookies.
+-   **Remove Cookies**: Remove the `SecureNetflixId` and `NetflixId` cookies from Netflix.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository to your local machine:
 
-- Configure the top-level `parserOptions` property like this:
+    ```bash
+    git clone https://github.com/your-username/lemon-cake-loader.git
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Open Chrome and navigate to `chrome://extensions/`.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Enable "Developer mode" by clicking the toggle switch in the top right corner.
+
+4. Click on the "Load unpacked" button and select the directory where you cloned the repository.
+
+## Usage
+
+1. Click on the Lemon Cake Loader icon in the Chrome toolbar.
+
+2. Enter the values for `SecureNetflixId` and `NetflixId` in the respective input fields.
+
+3. Use the following buttons to manage the cookies:
+    - **Load**: Sets the cookies with the provided values and reloads the Netflix tab.
+    - **Get**: Retrieves the current values of the cookies and displays them in the input fields.
+    - **Remove**: Removes the cookies from Netflix and clears the input fields.
+
+## Files
+
+-   **background.js**: Handles background tasks such as setting, getting, and removing cookies, and reloading the tab.
+-   **manifest.json**: Contains the configuration for the Chrome extension.
+-   **index.html**: The popup HTML file.
+-   **App.js**: React component for the popup interface.
+
+## Development
+
+1. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2. Start the development server:
+
+    ```bash
+    npm start
+    ```
+
+3.  3. Build the project:
+
+    ```bash
+    npm run build
+    ```
+
+## Contact
+
+For any inquiries or feedback, please contact [akash.sh989@gmail.com]
