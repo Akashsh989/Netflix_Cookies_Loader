@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Lemon Cake Loader",
+    "description": "Loades Lemon cake onto your browser page to make it yummy :)",
+    "version": "1.0.0",
+    "icons": {
+        "16": "lemoncake.png",
+        "48": "lemoncake.png",
+        "128": "lemoncake.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "lemoncake.png",
+            "48": "lemoncake.png",
+            "128": "lemoncake.png"
+        }
+    },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "*://*.netflix.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
